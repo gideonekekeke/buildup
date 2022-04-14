@@ -1,5 +1,5 @@
 require('dotenv').config()
-require("./config/db.js")
+require("./Config/db")
 const express = require('express')
 const port = process.env.PORT || 5030
 const myRouter = require("./Router/router")
