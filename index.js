@@ -2,13 +2,13 @@ require('dotenv').config()
 require("./config/db.js")
 const express = require('express')
 const port = process.env.PORT || 5030
+const myRouter = require("./Router/router")
 
 const cors = require("cors")
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin : "*"}))
 
-const myRouter = require("./Router/router")
 const myRouter2 = require("./Router/router2")
 
 app.use("/api", require("./Router/router2"))
